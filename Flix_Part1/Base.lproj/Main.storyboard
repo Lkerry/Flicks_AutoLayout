@@ -22,6 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94208042510000001" green="0.61705400730000004" blue="0.54863300189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="193" id="Yha-1o-mNy" customClass="MovieCell" customModule="Flix_Part1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="193"/>
@@ -38,6 +39,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Meg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcW-1z-g2N">
                                                     <rect key="frame" x="109" y="5" width="257" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.68439738978109521" green="0.94208042510000001" blue="0.86067406781397149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -45,6 +47,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-rj-oz9">
                                                     <rect key="frame" x="109" y="36" width="257" height="153"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.7453351614" blue="0.48519580400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.</string>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -83,7 +86,7 @@
         <!--Details View Controller-->
         <scene sceneID="8Mu-SS-NR8">
             <objects>
-                <viewController id="Zxh-wC-vaZ" customClass="DetailsViewController" customModule="Flix_Part1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zxh-wC-vaZ" userLabel="Details View Controller" customClass="DetailsViewController" customModule="Flix_Part1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oe1-5X-3qU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +94,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHX-q7-k34">
                                 <rect key="frame" x="0.0" y="64" width="375" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3RE-VC-HHC" appends="YES" id="pSh-sP-dQY"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Meg" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYR-Qo-YxH">
                                 <rect key="frame" x="124" y="346" width="235" height="37"/>
@@ -114,23 +121,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o6F-ov-Piw">
-                                <rect key="frame" x="16" y="242" width="100" height="182"/>
+                                <rect key="frame" x="0.0" y="242" width="116" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.7453351614" blue="0.48519580400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6CL-JK-In6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eQU-4U-Qt6"/>
+                    <navigationItem key="navigationItem" title="Title" id="GXF-hv-T3O" userLabel="Navigation Item">
+                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="PQD-Te-Gzv" userLabel="Trailer">
+                            <connections>
+                                <segue destination="j1F-sX-RvF" kind="show" id="xEu-el-nDu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="backDropImageView" destination="VHX-q7-k34" id="C6Y-m0-D6N"/>
                         <outlet property="overviewLabel" destination="HNH-G0-5bb" id="obK-kj-3pe"/>
                         <outlet property="posterImageView" destination="o6F-ov-Piw" id="E5t-zW-aYb"/>
                         <outlet property="releaseDateLabel" destination="KMB-qK-fr2" id="vrd-qS-4GR"/>
                         <outlet property="titleLabel" destination="mYR-Qo-YxH" id="7Ab-6J-121"/>
+                        <outlet property="trailerButton" destination="PQD-Te-Gzv" id="e4q-gc-WCI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMy-Ae-N1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3RE-VC-HHC">
+                    <connections>
+                        <segue destination="j1F-sX-RvF" kind="show" id="HcR-x6-5b9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2844" y="30.134932533733135"/>
         </scene>
@@ -160,6 +179,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QEp-hw-IHL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pgr-1M-WDd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -183,7 +203,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qf6-7G-JFo">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.7453351614" blue="0.48519580400000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="tix-oY-pG6">
                                     <size key="itemSize" width="125" height="191"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -222,7 +242,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMK-Cr-pVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="725"/>
+            <point key="canvasLocation" x="990" y="908"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="EIo-9F-Lyx">
+            <objects>
+                <viewController id="j1F-sX-RvF" userLabel="Trailer View Controller" customClass="TrailerViewController" customModule="Flix_Part1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WPr-1G-R96">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYm-Dj-rAF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="75a-G3-gpf"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="aYm-Dj-rAF" id="qCv-YF-f28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPf-i5-2jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1816.8" y="890.10494752623697"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="kTa-bT-ZlR">
@@ -241,7 +286,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYO-RF-34a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50" y="738"/>
+            <point key="canvasLocation" x="50" y="871"/>
         </scene>
     </scenes>
     <resources>
@@ -249,6 +294,7 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HcR-x6-5b9"/>
         <segue reference="uah-vD-XRT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -91,6 +91,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UIColle
         if let posterPath = movie["poster_path"] as? String{
             let posterBaseUrl = "https://image.tmdb.org/t/p/w500"
             let posterUrl = URL(string:  posterBaseUrl + posterPath)
+            
             cell.posterImageView.af_setImage(withURL: posterUrl!)
             
         }
@@ -99,6 +100,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UIColle
             
         }
         
+        cell.backgroundColor = UIColor.white
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         return cell
     }
     

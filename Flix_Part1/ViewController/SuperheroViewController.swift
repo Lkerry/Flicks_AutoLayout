@@ -42,6 +42,9 @@ class SuperheroViewController: UIViewController, UICollectionViewDelegate, UICol
             let posterURL = URL(string: posterBaseUrl + posterPathString)!
             cell.posterImageView.af_setImage(withURL: posterURL)
         }
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         return cell
     }
     
