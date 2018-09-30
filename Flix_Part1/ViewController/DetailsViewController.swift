@@ -9,6 +9,7 @@
 import UIKit
 
 enum MovieKeys {
+    static let movieID = "id"
     static let title = "title"
     
 }
@@ -20,6 +21,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var trailerButton: UIBarButtonItem!
     
     var movie: [String: Any]?
 
@@ -38,15 +40,24 @@ class DetailsViewController: UIViewController {
             backDropImageView.af_setImage(withURL: backdropURL)
             let posterPathURL = URL(string: posterBaseUrl + posterPathString)!
             posterImageView.af_setImage(withURL: posterPathURL)
+            navigationItem.title = movie[MovieKeys.title] as? String
         }
 
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! TrailerViewController
+        if let movie = movie {
+            let movieId = String(describing: movie[MovieKeys.movieID]!)
+            vc.movieId = movieId
+        }
 
     /*
     // MARK: - Navigation
@@ -58,4 +69,5 @@ class DetailsViewController: UIViewController {
     }
     */
 
+}
 }
