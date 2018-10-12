@@ -46,7 +46,8 @@ The following **stretch** features are implemented:
 - [X] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
 - [X] Customize the navigation bar (+1pt)
-- [ ] List in any optionals you didn't finish from last week (+1-3pts)
+- [X] List in any optionals you didn't finish from last week (+1-3pts)
+- The Trailer of the movie
    
 
 The following **additional** features are implemented:
@@ -66,13 +67,13 @@ Time spent: **10** hours spent in total
 The following **required** user stories are complete:
 
 - The following screens use AutoLayout to adapt to various orientations and screen sizes
-   - [ ] Movie feed view (+3pt)
-   - [ ] Detail view (+2pt)
+   - [X] Movie feed view (+3pt)
+   - [X] Detail view (+2pt)
 
 The following **stretch** user stories are implemented:
 
-- [ ] Dynamic Height Cells (+1)
-- [ ] Collection View AutoLayout (+2)
+- [X] Dynamic Height Cells (+1)
+- [X] Collection View AutoLayout (+2)
 
 The following **additional** user stories are implemented:
 
@@ -85,7 +86,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='Flix_Part2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Flix_AutoLayout1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
